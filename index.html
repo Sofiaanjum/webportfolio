@@ -1,158 +1,1016 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sofia Ahmed — Data Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-<html>
-	<head>
-		<title>Sofia Ahmed Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+  :root {
+    --navy: #0B1929;
+    --navy-mid: #112338;
+    --navy-light: #1A3350;
+    --accent: #2D7DD2;
+    --accent-light: #4E9FE5;
+    --accent-pale: #0D2A45;
+    --text-primary: #E8EFF7;
+    --text-secondary: #8BA3BC;
+    --text-muted: #4F6880;
+    --border: rgba(45, 125, 210, 0.18);
+    --border-light: rgba(255,255,255,0.06);
+    --mono: 'DM Mono', monospace;
+    --sans: 'DM Sans', sans-serif;
+  }
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+  html { scroll-behavior: smooth; }
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>Sofia Ahmed</h1>
-						<h2>Data Engineering Portfolio</h2>
-						<p>Follow me on <a href="https://www.linkedin.com/in/sofiaanjum/">LinkedIn</a></p>
-						<p>Contact me at ahmedsofia15@gmail.com</p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+  body {
+    font-family: var(--sans);
+    background: var(--navy);
+    color: var(--text-primary);
+    font-size: 15px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Portfolio</a>
-					</header>
+  a { color: var(--accent-light); text-decoration: none; }
+  a:hover { color: var(--text-primary); }
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">Portfolio</a></li>
-							<li><a href="generic.html">About Me</a></li>
-							<li><a href="elements.html">Resume</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="https://github.com/Sofiaanjum" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.1rem 3rem;
+    background: rgba(11,25,41,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-light);
+  }
 
-				<!-- Main -->
-					<div id="main">
+  .nav-logo {
+    font-family: var(--mono);
+    font-size: 14px;
+    color: var(--accent-light);
+    letter-spacing: 0.04em;
+  }
 
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									 <!--span class="date">March 2026</span-->
-								    <h2><a href="https://github.com/Sofiaanjum/transit-analytics-pipeline">TTC Transit Analytics Pipeline</a></h2>
-								  </header>
-								  <a href="https://github.com/Sofiaanjum/transit-analytics-pipeline" class="image fit">
-								    <img src="images/ttc.jpg" alt="TTC Transit Analytics Data Pipeline" />
-								  </a>
-								  <p>
-								  Built an end-to-end data pipeline using Python and Snowflake to ingest and process TTC GTFS transit data, creating analytics-ready tables for route, stop, and trip analysis.
-								  </p>
-								  <ul class="actions special">
-								    <li><a href="https://github.com/Sofiaanjum/transit-analytics-pipeline" class="button">Full Story</a></li>
-								  </ul>
-							</article>
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text-secondary);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--accent-light); }
 
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-								  <header>
-									<!--span class="date">August 21, 2023</span-->
-									<h2><a href="https://github.com/Sofiaanjum/Humber-Summarizer">Humber Summarizer</a></h2>
-									</header>
-									<a href="https://github.com/Sofiaanjum/Humber-Summarizer" class="image main"><img src="images/summary.jpg" alt="" /></a>
-									<p>A versatile document summarization tool for simplifying text, PDF, or Word document summaries.<br /> 
-									It supports both English and French, helping users in summarizing content effectively.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/Sofiaanjum/Humber-Summarizer" class="button large">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<!--span class="date">August 11, 2023</span-->
-										<h2><a href="https://github.com/Sofiaanjum/SEE">Sentiment Emotion Engine (SEE)</a></h2>
-									</header>
-									<a href="https://github.com/Sofiaanjum/SEE" class="image fit"><img src="images/emotion.jpg" alt="" /></a>
-									<p>Sentiment Emotion Engine (SEE) is a web application that performs real-time sentiment analysis on video streams, providing insights into the emotions expressed by individuals during video conferences.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/Sofiaanjum/SEE" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<!--span class="date">June 11, 2023</span-->
-										<h2><a href="https://github.com/Sofiaanjum/Online-Purchase-Order-Risk-Classification">Online Purchase Order Risk Classification</a></h2>
-									</header>
-									<a href="https://github.com/Sofiaanjum/Online-Purchase-Order-Risk-Classification" class="image fit"><img src="images/payment.jpg" alt="" /></a>
-									<p>The project aims to classify online purchase orders into different risk categories. It involves data exploration, preprocessing, building and evaluating machine learning models, and generating predictions for test data.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/Sofiaanjum/Online-Purchase-Order-Risk-Classification" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<!--span class="date">May 30, 2023</span-->
-										<h2><a href="https://github.com/Sofiaanjum/Customer-Segmentation">Customer Segmentation Analysis</a></h2>
-									</header>
-									<a href="https://github.com/Sofiaanjum/Customer-Segmentation" class="image fit"><img src="images/customer.jpg" alt="" /></a>
-									<p>This project employs K-Means clustering, Principal Component Analysis (PCA), and Autoencoders for customer segmentation. These techniques provide insights into customer behavior and enhance targeted marketing efforts.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/Sofiaanjum/Customer-Segmentation" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<!--span class="date">April 17, 2023</span-->
-										<h2><a href="https://github.com/Sofiaanjum/TTC_Bus_Delay_Prediction">Toronto TTC Bus Delay Prediction</a></h2>
-									</header>
-									<a href="https://github.com/Sofiaanjum/TTC_Bus_Delay_Prediction" class="image fit"><img src="images/ttc.jpg" alt="" /></a>
-									<p>Data-driven analysis and predictive modeling for Toronto's TTC bus delay incidents, utilizing machine learning and time series analysis to enhance public transportation efficiency.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/Sofiaanjum/TTC_Bus_Delay_Prediction" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<!--span class="date">June 11, 2023</span-->
-										<h2><a href="https://github.com/Sofiaanjum/AWS-Sagemaker_GroundTruth_Canary_ShadowTesting">Predictive Churn Analysis with AWS SageMaker Canary Deployment</a></h2>
-									</header>
-									<a href="https://github.com/Sofiaanjum/AWS-Sagemaker_GroundTruth_Canary_ShadowTesting" class="image fit"><img src="images/churn.jpg" alt="" /></a>
-									<p>This project works on customer churn analysis and predictive modeling. It demonstrates the utilization of SageMaker Canary Deployment for seamless model rollout and XGBoost model training</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/Sofiaanjum/AWS-Sagemaker_GroundTruth_Canary_ShadowTesting" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<!--span class="date">November 24, 2022</span-->
-										<h2><a href="https://public.tableau.com/app/profile/sofia.anjum.ahmed/viz/Housing_16693398285810/HomePage">Elevating Data Insights: Award-Winning Tableau Visualizations</a></h2>
-									</header>
-									<a href="https://public.tableau.com/app/profile/sofia.anjum.ahmed/viz/Housing_16693398285810/HomePage" class="image fit"><img src="images/housing.jpg" alt="" /></a>
-									<p>This project dives deep into Ontario's housing market, uncovering a 15% surge in housing prices and the impact of COVID-19. This dynamic dashboard empowers stakeholders, policymakers, and researchers with actionable data insights, facilitating evidence-based decision-making and strategic planning to address housing challenges.</p>
-									<ul class="actions special">
-										<li><a href="https://public.tableau.com/app/profile/sofia.anjum.ahmed/viz/Housing_16693398285810/HomePage" class="button">Full Story</a></li>
-									</ul>
-								</article>
-							</section>
-					</div>	
-			</div>
+  /* SECTIONS */
+  section { padding: 6rem 0; }
+  .container { max-width: 960px; margin: 0 auto; padding: 0 2rem; }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+  /* HERO */
+  #hero {
+    min-height: 100vh;
+    display: flex; align-items: center;
+    padding-top: 80px;
+    position: relative;
+    overflow: hidden;
+  }
 
-	</body>
+  .hero-grid-bg {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(45,125,210,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(45,125,210,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+  }
+
+  .hero-glow {
+    position: absolute;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(45,125,210,0.12) 0%, transparent 70%);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -60%);
+    pointer-events: none;
+  }
+
+  .hero-content { position: relative; z-index: 1; }
+
+  .hero-eyebrow {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--accent-light);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    display: flex; align-items: center; gap: 0.75rem;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 32px; height: 1px;
+    background: var(--accent);
+  }
+
+  h1 {
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+  }
+
+  h1 span { color: var(--accent-light); font-weight: 400; }
+
+  .hero-tagline {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    max-width: 560px;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+  }
+
+  .hero-stats {
+    display: flex; gap: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .hero-stat-num {
+    font-family: var(--mono);
+    font-size: 1.6rem;
+    color: var(--accent-light);
+    font-weight: 500;
+    display: block;
+  }
+  .hero-stat-label {
+    font-size: 11px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family: var(--mono);
+  }
+
+  .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 0.7rem 1.6rem;
+    font-size: 13px;
+    font-family: var(--mono);
+    letter-spacing: 0.05em;
+    border-radius: 3px;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: #fff;
+    border: 1px solid var(--accent);
+  }
+  .btn-primary:hover { background: var(--accent-light); border-color: var(--accent-light); color: #fff; }
+  .btn-outline {
+    background: transparent;
+    color: var(--text-secondary);
+    border: 1px solid var(--border-light);
+  }
+  .btn-outline:hover { border-color: var(--accent); color: var(--accent-light); }
+
+  /* SECTION HEADERS */
+  .section-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--accent-light);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    display: flex; align-items: center; gap: 0.75rem;
+  }
+  .section-label::before {
+    content: '';
+    display: inline-block;
+    width: 24px; height: 1px;
+    background: var(--accent);
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: -0.01em;
+    color: var(--text-primary);
+    margin-bottom: 3rem;
+  }
+
+  /* ABOUT */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  .about-text p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    font-size: 15px;
+    font-weight: 300;
+  }
+  .cert-list { list-style: none; margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; }
+  .cert-item {
+    display: flex; align-items: center; gap: 0.6rem;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text-secondary);
+  }
+  .cert-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+  }
+
+  .about-card {
+    background: var(--navy-mid);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2rem;
+  }
+  .about-card-title {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 1.2rem;
+  }
+  .about-card p { color: var(--text-secondary); font-size: 14px; font-weight: 300; }
+
+  /* EXPERIENCE */
+  .exp-list { display: flex; flex-direction: column; gap: 0; }
+
+  .exp-item {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 2rem;
+    padding: 2.5rem 0;
+    border-top: 1px solid var(--border-light);
+  }
+  .exp-item:last-child { border-bottom: 1px solid var(--border-light); }
+
+  .exp-meta { padding-top: 0.15rem; }
+  .exp-date {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+    margin-bottom: 0.4rem;
+  }
+  .exp-company {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--accent-light);
+    margin-bottom: 0.2rem;
+  }
+  .exp-location {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-family: var(--mono);
+  }
+
+  .exp-role {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 0.8rem;
+  }
+  .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+  .exp-bullets li {
+    font-size: 14px;
+    color: var(--text-secondary);
+    font-weight: 300;
+    padding-left: 1rem;
+    position: relative;
+  }
+  .exp-bullets li::before {
+    content: '–';
+    position: absolute; left: 0;
+    color: var(--accent);
+  }
+
+  .exp-tag {
+    display: inline-block;
+    background: var(--accent-pale);
+    border: 1px solid rgba(45,125,210,0.3);
+    color: var(--accent-light);
+    font-family: var(--mono);
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 2px;
+    letter-spacing: 0.05em;
+  }
+
+  /* SKILLS */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .skill-card {
+    background: var(--navy-mid);
+    border: 1px solid var(--border-light);
+    border-radius: 4px;
+    padding: 1.5rem;
+    transition: border-color 0.2s;
+  }
+  .skill-card:hover { border-color: var(--border); }
+
+  .skill-card-icon {
+    font-size: 14px;
+    margin-bottom: 0.6rem;
+    color: var(--accent-light);
+    font-family: var(--mono);
+  }
+  .skill-card-title {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.02em;
+  }
+
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .skill-tag {
+    background: var(--navy-light);
+    border: 1px solid var(--border-light);
+    color: var(--text-secondary);
+    font-family: var(--mono);
+    font-size: 11px;
+    padding: 3px 9px;
+    border-radius: 2px;
+  }
+
+  /* PROJECTS */
+  .projects-list { display: flex; flex-direction: column; gap: 2rem; }
+
+  .project-card {
+    background: var(--navy-mid);
+    border: 1px solid var(--border-light);
+    border-radius: 4px;
+    padding: 2.5rem;
+    transition: border-color 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .project-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+  }
+  .project-card:hover { border-color: var(--border); }
+  .project-card:hover::before { transform: scaleX(1); }
+
+  .project-header {
+    display: flex; align-items: flex-start; justify-content: space-between;
+    margin-bottom: 1rem;
+    gap: 1rem;
+  }
+
+  .project-name {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 0.3rem;
+  }
+
+  .project-tag {
+    background: var(--accent-pale);
+    border: 1px solid rgba(45,125,210,0.25);
+    color: var(--accent-light);
+    font-family: var(--mono);
+    font-size: 10px;
+    padding: 3px 9px;
+    border-radius: 2px;
+    white-space: nowrap;
+    align-self: flex-start;
+  }
+
+  .project-desc {
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 1.2rem;
+    line-height: 1.75;
+  }
+
+  .project-metrics {
+    display: flex; gap: 2rem; flex-wrap: wrap;
+    padding: 1rem 1.2rem;
+    background: var(--navy);
+    border: 1px solid var(--border-light);
+    border-radius: 3px;
+    margin-bottom: 1.2rem;
+  }
+  .project-metric-val {
+    font-family: var(--mono);
+    font-size: 1rem;
+    color: var(--accent-light);
+    font-weight: 500;
+    display: block;
+  }
+  .project-metric-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .project-stack { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.2rem; }
+  .project-stack-tag {
+    background: var(--navy-light);
+    border: 1px solid var(--border-light);
+    color: var(--text-secondary);
+    font-family: var(--mono);
+    font-size: 11px;
+    padding: 3px 9px;
+    border-radius: 2px;
+  }
+
+  .project-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+  .project-link {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--accent-light);
+    border-bottom: 1px solid rgba(78,159,229,0.3);
+    padding-bottom: 1px;
+    transition: border-color 0.2s;
+  }
+  .project-link:hover { border-color: var(--accent-light); color: var(--text-primary); }
+
+  /* ACHIEVEMENTS */
+  .achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .ach-card {
+    background: var(--navy-mid);
+    border: 1px solid var(--border-light);
+    border-radius: 4px;
+    padding: 1.8rem;
+    text-align: center;
+    transition: border-color 0.2s;
+  }
+  .ach-card:hover { border-color: var(--border); }
+
+  .ach-num {
+    font-family: var(--mono);
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--accent-light);
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+  .ach-label {
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-weight: 300;
+  }
+
+  /* CONTACT */
+  #contact { background: var(--navy-mid); }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+  .contact-text p {
+    color: var(--text-secondary);
+    font-weight: 300;
+    margin-bottom: 2rem;
+    font-size: 15px;
+  }
+  .contact-links { display: flex; flex-direction: column; gap: 0.8rem; }
+  .contact-link-item {
+    display: flex; align-items: center; gap: 0.8rem;
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-family: var(--mono);
+    transition: color 0.2s;
+  }
+  .contact-link-item:hover { color: var(--accent-light); }
+  .contact-link-label {
+    font-size: 10px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    min-width: 60px;
+  }
+
+  .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+  .form-input {
+    background: var(--navy);
+    border: 1px solid var(--border-light);
+    border-radius: 3px;
+    padding: 0.75rem 1rem;
+    font-size: 14px;
+    color: var(--text-primary);
+    font-family: var(--sans);
+    width: 100%;
+    transition: border-color 0.2s;
+    outline: none;
+  }
+  .form-input::placeholder { color: var(--text-muted); }
+  .form-input:focus { border-color: var(--accent); }
+  textarea.form-input { resize: vertical; min-height: 120px; }
+
+  footer {
+    padding: 2rem 0;
+    text-align: center;
+    border-top: 1px solid var(--border-light);
+  }
+  footer p {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 0.08em;
+  }
+
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    .container { padding: 0 1.5rem; }
+    .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
+    .achievements-grid { grid-template-columns: repeat(2, 1fr); }
+    h1 { font-size: 2.2rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">SA.DEV</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#achievements">Impact</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="container hero-content">
+    <div class="hero-eyebrow">Data Engineer</div>
+    <h1>Sofia <span>Ahmed</span></h1>
+    <p class="hero-tagline">Snowflake · dbt · Kafka · Azure — turning data chaos into trusted, production-grade pipelines that power real business decisions.</p>
+    <div class="hero-stats">
+      <div>
+        <span class="hero-stat-num">2+</span>
+        <span class="hero-stat-label">Years Experience</span>
+      </div>
+      <div>
+        <span class="hero-stat-num">4 TB+</span>
+        <span class="hero-stat-label">Data Processed</span>
+      </div>
+      <div>
+        <span class="hero-stat-num">590K+</span>
+        <span class="hero-stat-label">Transactions Streamed</span>
+      </div>
+    </div>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn btn-primary">Get in touch</a>
+      <a href="#projects" class="btn btn-outline">View projects</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="section-label">01. About</div>
+    <h2>Who I Am</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I'm a <strong style="color:var(--text-primary);font-weight:500;">Data Engineer</strong> based in Mississauga, ON, with 2+ years of experience building scalable, cloud-based data pipelines that are reliable, observable, and genuinely useful to the people who depend on them.</p>
+        <p>My work spans investment analytics at <strong style="color:var(--accent-light);font-weight:400;">IMCO</strong>, credit risk research at <strong style="color:var(--accent-light);font-weight:400;">Humber College</strong>, and education policy analytics at <strong style="color:var(--accent-light);font-weight:400;">HEQCO</strong> — across all of it, the throughline is the same: take messy data, make it trustworthy, and make it fast.</p>
+        <p>I'm currently focused on end-to-end modern data stack projects — combining Kafka, Snowflake, dbt, and Airflow into production-grade systems, not just prototypes.</p>
+        <ul class="cert-list">
+          <li class="cert-item"><span class="cert-dot"></span>Microsoft Azure Data Engineer (DP-203)</li>
+          <li class="cert-item"><span class="cert-dot"></span>AWS Certified Cloud Practitioner</li>
+          <li class="cert-item"><span class="cert-dot"></span>Databricks Data Engineer</li>
+          <li class="cert-item"><span class="cert-dot"></span>PG Certificate, AI with Machine Learning — Humber College</li>
+          <li class="cert-item"><span class="cert-dot"></span>M.Eng, Chemical Engineering — Aligarh Muslim University</li>
+        </ul>
+      </div>
+      <div class="about-card">
+        <div class="about-card-title">Current focus</div>
+        <p style="margin-bottom:1rem;">Building production-grade streaming and batch pipelines from scratch — Kafka ingest, Snowflake DWH, dbt transformation layers, Airflow orchestration, Docker containerisation.</p>
+        <p>Open to <strong style="color:var(--accent-light);font-weight:400;">senior data engineering</strong> and <strong style="color:var(--accent-light);font-weight:400;">analytics engineering</strong> roles in the Toronto area or remote.</p>
+        <div style="margin-top:1.5rem;padding-top:1.2rem;border-top:1px solid var(--border-light);">
+          <div class="about-card-title">Based in</div>
+          <p>Mississauga, Ontario, Canada</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <div class="section-label">02. Experience</div>
+    <h2>Work History</h2>
+    <div class="exp-list">
+
+      <div class="exp-item">
+        <div class="exp-meta">
+          <div class="exp-date">Jan 2025 – Present</div>
+          <div class="exp-company">—</div>
+          <div class="exp-location">Career break</div>
+        </div>
+        <div>
+          <div class="exp-role">Career Break — Maternity Leave</div>
+          <ul class="exp-bullets">
+            <li>Actively maintaining and advancing technical skills through independent data engineering projects, including production-grade streaming platforms and transit analytics pipelines.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-meta">
+          <div class="exp-date">Jan 2024 – Dec 2024</div>
+          <div class="exp-company">IMCO</div>
+          <div class="exp-location">Toronto, ON</div>
+        </div>
+        <div>
+          <div class="exp-role">Data Engineer <span class="exp-tag" style="margin-left:0.5rem;">Full-time + Internship</span></div>
+          <ul class="exp-bullets">
+            <li>Re-engineered ETL pipelines using Azure Data Factory, SQL Server, Databricks, and Power BI — improving data delivery SLAs by 25% for predictive investment risk models.</li>
+            <li>Built Spark-based transformation workflows on Databricks processing 4+ TB of data to support investment and exposure forecasting, improving decision-making efficiency by 12%.</li>
+            <li>Implemented data validation and root-cause analysis processes, improving data quality and production stability across critical pipelines.</li>
+            <li>Translated business and risk requirements into data models and Power BI dashboards, enabling automated monitoring across 10+ asset classes.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-meta">
+          <div class="exp-date">May 2023 – Aug 2023</div>
+          <div class="exp-company">Humber College</div>
+          <div class="exp-location">Toronto, ON</div>
+        </div>
+        <div>
+          <div class="exp-role">Data Engineer — Research Co-op</div>
+          <ul class="exp-bullets">
+            <li>Processed and cleaned 500K+ data points using Python (pandas, NumPy, scikit-learn) to build predictive models improving loan risk segmentation accuracy by 15%.</li>
+            <li>Developed Power BI dashboards to track default and underwriting KPIs for financial clients.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-meta">
+          <div class="exp-date">Sep 2022 – Dec 2022</div>
+          <div class="exp-company">HEQCO</div>
+          <div class="exp-location">Toronto, ON</div>
+        </div>
+        <div>
+          <div class="exp-role">Data Analyst — Co-op</div>
+          <ul class="exp-bullets">
+            <li>Built Python automation scripts (Pandas, SQL) to streamline data processing workflows, improving efficiency by 20% and reducing manual intervention.</li>
+            <li>Performed exploratory data analysis and designed Power BI dashboards tracking key metrics for higher education policy evaluation.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-meta">
+          <div class="exp-date">Sep 2022 – Dec 2022</div>
+          <div class="exp-company">Humber College</div>
+          <div class="exp-location">Toronto, ON</div>
+        </div>
+        <div>
+          <div class="exp-role">Data Analyst — Part-time, Contract</div>
+          <ul class="exp-bullets">
+            <li>Led a data-driven curriculum review across 30+ academic programs in partnership with the Project Manager and Associate Dean.</li>
+            <li>Developed interactive Power BI dashboards and visual reports to present findings to senior leadership.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <div class="section-label">03. Skills</div>
+    <h2>Technical Expertise</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-card-icon">&#9729;</div>
+        <div class="skill-card-title">Cloud Platforms</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Azure Data Factory</span>
+          <span class="skill-tag">Databricks</span>
+          <span class="skill-tag">Synapse Analytics</span>
+          <span class="skill-tag">Azure DevOps</span>
+          <span class="skill-tag">AWS</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-icon">&#9889;</div>
+        <div class="skill-card-title">Data Engineering & Warehousing</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Snowflake</span>
+          <span class="skill-tag">dbt</span>
+          <span class="skill-tag">Apache Kafka</span>
+          <span class="skill-tag">Apache Airflow</span>
+          <span class="skill-tag">ETL/ELT</span>
+          <span class="skill-tag">SQL Server</span>
+          <span class="skill-tag">OLAP</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-icon">&#9670;</div>
+        <div class="skill-card-title">Big Data & Processing</div>
+        <div class="skill-tags">
+          <span class="skill-tag">PySpark</span>
+          <span class="skill-tag">Spark</span>
+          <span class="skill-tag">Hadoop</span>
+          <span class="skill-tag">HDFS</span>
+          <span class="skill-tag">DBFS</span>
+          <span class="skill-tag">Hive</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-icon">{ }</div>
+        <div class="skill-card-title">Programming & Automation</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">pandas</span>
+          <span class="skill-tag">NumPy</span>
+          <span class="skill-tag">scikit-learn</span>
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">CI/CD</span>
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">Terraform</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-icon">&#9638;</div>
+        <div class="skill-card-title">Modelling & Analytics</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Machine Learning</span>
+          <span class="skill-tag">Predictive Modelling</span>
+          <span class="skill-tag">Feature Engineering</span>
+          <span class="skill-tag">Credit Risk</span>
+          <span class="skill-tag">Trend Forecasting</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-icon">&#8599;</div>
+        <div class="skill-card-title">Visualisation & BI</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Power BI</span>
+          <span class="skill-tag">Streamlit</span>
+          <span class="skill-tag">Plotly</span>
+          <span class="skill-tag">Tableau</span>
+          <span class="skill-tag">KPI Dashboards</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <div class="section-label">04. Projects</div>
+    <h2>Selected Work</h2>
+    <div class="projects-list">
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-name">Real-Time Fintech Fraud Detection Platform</div>
+          <span class="project-tag">Streaming · End-to-end</span>
+        </div>
+        <p class="project-desc">A production-grade end-to-end streaming data platform built from scratch — real financial transactions ingested in real-time, PII masked before landing in Snowflake, transformed through a full dbt staging→intermediate→mart layer, orchestrated by Airflow, and surfaced on a live fraud analytics dashboard. No tutorials. No shortcuts.</p>
+        <div class="project-metrics">
+          <div>
+            <span class="project-metric-val">590K+</span>
+            <span class="project-metric-label">Transactions streamed</span>
+          </div>
+          <div>
+            <span class="project-metric-val">2.4%</span>
+            <span class="project-metric-label">Fraud rate detected</span>
+          </div>
+          <div>
+            <span class="project-metric-val">&lt;3 min</span>
+            <span class="project-metric-label">End-to-end runtime</span>
+          </div>
+          <div>
+            <span class="project-metric-val">2 envs</span>
+            <span class="project-metric-label">Dev + prod separated</span>
+          </div>
+        </div>
+        <div class="project-stack">
+          <span class="project-stack-tag">Apache Kafka</span>
+          <span class="project-stack-tag">Snowflake</span>
+          <span class="project-stack-tag">dbt</span>
+          <span class="project-stack-tag">Apache Airflow</span>
+          <span class="project-stack-tag">Python</span>
+          <span class="project-stack-tag">Streamlit</span>
+          <span class="project-stack-tag">Docker</span>
+          <span class="project-stack-tag">Terraform</span>
+          <span class="project-stack-tag">GitHub Actions</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-name">TTC Transit Analytics Pipeline</div>
+          <span class="project-tag">Batch · Analytics</span>
+        </div>
+        <p class="project-desc">A production-style end-to-end data engineering project on real Toronto Transit Commission GTFS data. Raw transit files ingested via Python, loaded into Snowflake, transformed through layered dbt models, and served through a live interactive dashboard — route performance intelligence, stop activity classification with an interactive Toronto map, peak hour frequency analysis, and trip pattern breakdowns.</p>
+        <div class="project-metrics">
+          <div>
+            <span class="project-metric-val">135M</span>
+            <span class="project-metric-label">Stop events processed</span>
+          </div>
+          <div>
+            <span class="project-metric-val">229</span>
+            <span class="project-metric-label">Routes covered</span>
+          </div>
+          <div>
+            <span class="project-metric-val">9,512</span>
+            <span class="project-metric-label">Stops in network</span>
+          </div>
+          <div>
+            <span class="project-metric-val">267K</span>
+            <span class="project-metric-label">Trips modelled</span>
+          </div>
+        </div>
+        <div class="project-stack">
+          <span class="project-stack-tag">Python</span>
+          <span class="project-stack-tag">Snowflake</span>
+          <span class="project-stack-tag">dbt</span>
+          <span class="project-stack-tag">SQL</span>
+          <span class="project-stack-tag">PySpark</span>
+          <span class="project-stack-tag">Plotly</span>
+          <span class="project-stack-tag">Streamlit</span>
+        </div>
+        <div class="project-links">
+          <a href="https://transit-analytics-pipeline.streamlit.app" class="project-link" target="_blank">Live dashboard &rarr;</a>
+          <a href="https://github.com/Sofiaanjum/transit-analytics-pipeline" class="project-link" target="_blank">GitHub &rarr;</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-name">Humber Summarizer</div>
+          <span class="project-tag">NLP · Multilingual</span>
+        </div>
+        <p class="project-desc">A versatile document summarization tool that simplifies text, PDF, and Word document content. Supports both English and French, helping users efficiently summarize large volumes of content.</p>
+        <div class="project-stack">
+          <span class="project-stack-tag">Python</span>
+          <span class="project-stack-tag">NLP</span>
+          <span class="project-stack-tag">PDF Processing</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/Sofiaanjum/Humber-Summarizer" class="project-link" target="_blank">GitHub &rarr;</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-name">Sentiment Emotion Engine (SEE)</div>
+          <span class="project-tag">ML · Real-time</span>
+        </div>
+        <p class="project-desc">A web application performing real-time sentiment analysis on video streams, providing insights into emotions expressed during video conferences.</p>
+        <div class="project-stack">
+          <span class="project-stack-tag">Python</span>
+          <span class="project-stack-tag">Computer Vision</span>
+          <span class="project-stack-tag">Sentiment Analysis</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/Sofiaanjum/SEE" class="project-link" target="_blank">GitHub &rarr;</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-name">Ontario Housing Market Dashboard</div>
+          <span class="project-tag">Tableau · Award-winning</span>
+        </div>
+        <p class="project-desc">An award-winning Tableau dashboard diving deep into Ontario's housing market, uncovering a 15% surge in housing prices and the impact of COVID-19. Empowers stakeholders, policymakers, and researchers with actionable data insights for evidence-based decision-making.</p>
+        <div class="project-stack">
+          <span class="project-stack-tag">Tableau</span>
+          <span class="project-stack-tag">Data Visualisation</span>
+          <span class="project-stack-tag">Policy Analytics</span>
+        </div>
+        <div class="project-links">
+          <a href="https://public.tableau.com/app/profile/sofia.anjum.ahmed/viz/Housing_16693398285810/HomePage" class="project-link" target="_blank">Live dashboard &rarr;</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+  <div class="container">
+    <div class="section-label">05. Impact</div>
+    <h2>Key Metrics</h2>
+    <div class="achievements-grid">
+      <div class="ach-card">
+        <span class="ach-num">25%</span>
+        <div class="ach-label">Improvement in data delivery SLAs at IMCO via re-engineered ETL pipelines</div>
+      </div>
+      <div class="ach-card">
+        <span class="ach-num">4 TB+</span>
+        <div class="ach-label">Data processed with Spark on Databricks for investment forecasting</div>
+      </div>
+      <div class="ach-card">
+        <span class="ach-num">12%</span>
+        <div class="ach-label">Improvement in decision-making efficiency through predictive analytics</div>
+      </div>
+      <div class="ach-card">
+        <span class="ach-num">500K+</span>
+        <div class="ach-label">Data points cleaned for credit risk segmentation — 15% accuracy gain</div>
+      </div>
+      <div class="ach-card">
+        <span class="ach-num">20%</span>
+        <div class="ach-label">Workflow efficiency gain via Python automation at HEQCO</div>
+      </div>
+      <div class="ach-card">
+        <span class="ach-num">135M</span>
+        <div class="ach-label">Transit stop events modelled across the full TTC network</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-label">06. Contact</div>
+    <h2>Let's Connect</h2>
+    <div class="contact-grid">
+      <div class="contact-text">
+        <p>I'm open to senior data engineering and analytics engineering opportunities in the Toronto area or remote. If you're working on interesting data infrastructure challenges, I'd love to hear from you.</p>
+        <div class="contact-links">
+          <a href="mailto:ahmedsofia15@gmail.com" class="contact-link-item">
+            <span class="contact-link-label">Email</span>
+            ahmedsofia15@gmail.com
+          </a>
+          <a href="tel:+14377725665" class="contact-link-item">
+            <span class="contact-link-label">Phone</span>
+            +1 (437) 772 5665
+          </a>
+          <a href="https://www.linkedin.com/in/sofiaanjum/" class="contact-link-item" target="_blank">
+            <span class="contact-link-label">LinkedIn</span>
+            linkedin.com/in/sofiaanjum
+          </a>
+          <a href="https://github.com/Sofiaanjum" class="contact-link-item" target="_blank">
+            <span class="contact-link-label">GitHub</span>
+            github.com/Sofiaanjum
+          </a>
+        </div>
+      </div>
+      <div class="contact-form">
+        <input type="text" class="form-input" placeholder="Your name" />
+        <input type="email" class="form-input" placeholder="Your email" />
+        <textarea class="form-input" placeholder="Your message"></textarea>
+        <button class="btn btn-primary" style="align-self:flex-start;">Send message</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>Designed &amp; built by Sofia Ahmed &middot; Mississauga, Ontario &middot; 2025</p>
+  </div>
+</footer>
+
+</body>
 </html>
